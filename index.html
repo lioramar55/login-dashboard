@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safe Content</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="login-container">
+      <h1>Sign in!</h1>
+      <img src="assets/imgs/user.png" alt="user icon" />
+      <h5 class="error-msg">Username or password do not exist</h5>
+      <form class="login-form" onsubmit="onLoginUser(event)">
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="Your Username" />
+        <label for="username">Password</label>
+        <input type="password" name="password" placeholder="Your password" />
+        <input class="btn" type="submit" value="Login" />
+      </form>
+    </section>
+    <section class="user-section">
+      <h1 class="greet-user"></h1>
+      <img src="assets/imgs/safe.png" alt="safe vault" />
+      <div class="btn-section flex">
+        <button onclick="onUserLogout()" class="logout-btn btn">Logout</button>
+      </div>
+    </section>
+    <script src="js/utils.js"></script>
+    <script src="js/js-services/storage-services.js"></script>
+    <script src="js/js-services/user-services.js"></script>
+    <script src="js/user-controller.js"></script>
+  </body>
+</html>

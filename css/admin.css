@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+/* Global */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* containers */
+
+.dashboard-container {
+  width: 40rem;
+}
+
+/* Table View */
+
+table {
+  margin-top: 2vh;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #333;
+  color: whitesmoke;
+}
+
+thead td {
+  text-transform: capitalize;
+}
+
+td {
+  padding: 1.5rem;
+  border: 2px solid #333;
+}
+
+/* Cardview */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.flex-container > * {
+  flex-basis: 30%;
+}
+
+/* info section */
+
+.info-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.disp-options-imgs {
+  height: 2rem;
+  cursor: pointer;
+}
+
+.disp-options-imgs:hover {
+  height: 2.1rem;
+}
