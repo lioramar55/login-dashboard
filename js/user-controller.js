@@ -13,7 +13,10 @@ function onLoginUser(ev) {
     document.querySelector('.error-msg').style.visibility = 'visible';
     return;
   }
+  renderSafeContent();
+}
 
+function renderSafeContent() {
   document.querySelector('.user-section').classList.add('flex');
   document.querySelector('.greet-user').innerText = `Hello ${userName}`;
   document.querySelector('.login-container').classList.add('hide');

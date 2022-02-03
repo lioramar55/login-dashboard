@@ -34,13 +34,12 @@ function __saveUsers() {
 }
 
 function doLogin(userName, password) {
-  var user = gUsers.find((user) => user.username === userName);
+  var user = gUsers.find((user) => user.username === userName && user.password === password);
   if (!user) return false;
   user.lastLogin = new Date();
-  if (user.password === password) {
-    saveToStorage(USERKEY, user);
-    return true;
-  }
+  saveToStorage(USERKEY, user);
+  __saveUsers();
+  return true;
 }
 
 function userLogout() {

@@ -1,5 +1,10 @@
 'use strict';
 
+function getPrintedTime(timestamp) {
+  var date = new Date(timestamp);
+  return `${date.getHours}:${date.getMinutes}:${date.getSeconds}:`;
+}
+
 function getWord() {
   var length = rand(4, 8);
   var word = '';

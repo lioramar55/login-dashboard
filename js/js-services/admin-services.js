@@ -10,7 +10,11 @@ function sortUsers(value) {
   sortBy = value;
   switch (value) {
     case 'NAME':
-      gUsers.sort((a, b) => (a.username > b.username ? 1 : b.username > a.username ? -1 : 0));
+      gUsers.sort((a, b) => {
+        var x = a.txt;
+        var y = b.txt;
+        return x.toUpperCase() > y.toUpperCase() ? 1 : y.toUpperCase() > x.toUpperCase() ? -1 : 0;
+      });
       break;
     case 'LAST-LOGIN':
       gUsers.sort((a, b) => a.lastLogin - b.lastLogin);
