@@ -1,8 +1,6 @@
 'useStrict';
 
-function renderDashboard() {
-  renderDisplayOptions();
-  renderFiltersSelect();
+function onInit() {
   renderUsers();
 }
 
@@ -27,12 +25,6 @@ function renderCardView() {
   document.querySelector('.accounts-display').innerHTML = strHTMLs;
 }
 
-function renderDisplayOptions() {
-  var strHTML = `<div class="disp-options"><image onclick="renderUsers()" class="disp-options-imgs" src="assets/imgs/list.png" />
-   <image onclick="renderUsers(true)" class="disp-options-imgs" src="assets/imgs/cards.png" /></div>`;
-  document.querySelector('.info-container').innerHTML += strHTML;
-}
-
 function renderTable() {
   var strHTMLs = `<table><thead><tr>`;
   var users = getUsersToShow();
@@ -53,16 +45,6 @@ function renderTable() {
     strHTMLs += strHTML;
   });
   document.querySelector('.accounts-display').innerHTML = strHTMLs;
-}
-
-function renderFiltersSelect() {
-  var strHTML = `
-      <select onchange="onSetSort(this.value)">
-        <option value="LAST-LOGIN">Last Login</option>
-        <option value="NAME">Name</option>
-      </select>
-      `;
-  document.querySelector('.info-container').innerHTML += strHTML;
 }
 
 function onSetSort(value) {

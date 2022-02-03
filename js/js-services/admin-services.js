@@ -11,9 +11,11 @@ function sortUsers(value) {
   switch (value) {
     case 'NAME':
       gUsers.sort((a, b) => {
-        var x = a.txt;
-        var y = b.txt;
-        return x.toUpperCase() > y.toUpperCase() ? 1 : y.toUpperCase() > x.toUpperCase() ? -1 : 0;
+        return a.username.toUpperCase() > b.username.toUpperCase()
+          ? 1
+          : b.username.toUpperCase() > a.username.toUpperCase()
+          ? -1
+          : 0;
       });
       break;
     case 'LAST-LOGIN':

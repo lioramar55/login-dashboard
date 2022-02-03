@@ -14,10 +14,23 @@
     <title>Admin Dashboard</title>
   </head>
 
-  <body onload="renderDashboard()">
+  <body onload="onInit()">
     <div class="dashboard-container">
       <h1>Welcome Back, Admin</h1>
-      <div class="info-container"></div>
+      <div class="info-container">
+        <select onchange="onSetSort(this.value)">
+          <option value="LAST-LOGIN">Last Login</option>
+          <option value="NAME">Name</option>
+        </select>
+        <div class="disp-options">
+          <image onclick="renderUsers()" class="disp-options-imgs" src="assets/imgs/list.png" />
+          <image
+            onclick="renderUsers(true)"
+            class="disp-options-imgs"
+            src="assets/imgs/cards.png"
+          />
+        </div>
+      </div>
       <div class="accounts-display flex-container"></div>
     </div>
   </body>

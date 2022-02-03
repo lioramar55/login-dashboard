@@ -13,10 +13,6 @@ function onLoginUser(ev) {
     document.querySelector('.error-msg').style.visibility = 'visible';
     return;
   }
-  renderSafeContent();
-}
-
-function renderSafeContent() {
   document.querySelector('.user-section').classList.add('flex');
   document.querySelector('.greet-user').innerText = `Hello ${userName}`;
   document.querySelector('.login-container').classList.add('hide');
@@ -25,7 +21,12 @@ function renderSafeContent() {
     var elAdminBtn = `<button href="admin.html" class="btn admin-btn" onclick="onAdminBtnClick()">Admin Dashboard</button>`;
     document.querySelector('.btn-section').innerHTML += elAdminBtn;
   }
+  // renderSafeContent();
 }
+
+// function renderSafeContent() {
+
+// }
 
 function onUserLogout() {
   document.querySelector('.user-section').classList.toggle('flex');
