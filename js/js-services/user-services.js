@@ -15,6 +15,13 @@ var gUsers = [
     isAdmin: false,
     id: 'u102',
   },
+  {
+    username: 'dany',
+    password: '0000',
+    lastLogin: Date.now() - 60,
+    isAdmin: false,
+    id: 'u103',
+  },
 ];
 
 const USERKEY = 'loggedInUser';
